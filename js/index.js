@@ -1,8 +1,8 @@
-
 var destinationType; //used sets what should be returned (image date OR file path to image for example)
 
-document.addEventListener("deviceready",onDeviceReady,false);
 
+
+document.addEventListener("deviceready",onDeviceReady,false);
 function onDeviceReady() {
 	destinationType=navigator.camera.DestinationType;
 }
