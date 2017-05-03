@@ -21,3 +21,8 @@ function onPhotoDataSuccess(imageData) {
 function onFail(message) {
       alert('Failed because: ' + message);
 }
+
+function output () {
+        document.getElementById('result').innerHTML = 
+        document.getElementById("user_input").value;
+    }
