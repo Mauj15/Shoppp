@@ -1,15 +1,13 @@
-var destinationType; //used sets what should be returned (image date OR file path to image for example)
-
-
+var imageLoc; //used sets what should be returned (image date OR file path to image for example)
 
 document.addEventListener("deviceready",onDeviceReady,false);
 function onDeviceReady() {
-	destinationType=navigator.camera.DestinationType;
+	imageLoc=navigator.camera.imageLoc;
 }
 
 function capturePhoto() {
 	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 100,
-	destinationType: destinationType.DATA_URL });
+	imageLoc: imageLoc.DATA_URL });
 }
 	
 function onPhotoDataSuccess(imageData) {
@@ -22,6 +20,9 @@ function onFail(message) {
       alert('Failed because: ' + message);
 }
 
+
+
+//Used for the text input form, holds the data fields 
 function output () {
         document.getElementById('result').innerHTML = 
         document.getElementById("user_input").value;

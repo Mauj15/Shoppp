@@ -11,24 +11,34 @@
 
 </head> 
 <body> 
-
+<!-- Used to tag the area using the phonegap styling -->
 <div data-role="page" id="page">
 	<div data-role="header">
-		<h2>Camera</h2>
+		<h2>Your Shoping Tool:</h2>
 	</div>
 	<div data-role="content">	
        
-       <label for="phonegapcamera">Take a photo of your loyalty card </label>
-       	<button id="phonegapcamera" onclick="capturePhoto();">Take Photo</button> <br>
-       
+     <label for="phonegapcamera">Take a photo of your loyalty card </label>
+     <button id="phonegapcamera" onclick="capturePhoto();">Take Photo</button> <br>
+      
+	  <!--Image has to be large to funtion as card correctly--> 
 	<img style="display:none;width:360px;height:640px;" id="image" src="" />
         
+	<br>
+	<br>
+	<br>
+	<hr>
+	<br>	
+
+	<!-- Text input form -->
+	<!-- Uses the "output" function to operate-->
 	<form>
-    <label><b>Enter a Message</b></label>
+    <label><b>What's on your list?</b></label>
     <input type="text" name="message" id="user_input">
 	</form>	
 	
 	<input type="submit" onclick="output();"><br/>
+	<br>
 	<label>You are shopping for: </label>
 	<p><span id='result'></span></p>
 		
